@@ -1,5 +1,5 @@
-import React from 'react';
-import { Link } from 'react-router-dom';
+import React from "react";
+import { Link } from "react-router-dom";
 
 const DetailsHeader = ({ artistId, artistData, songData }) => (
   <div className="relative w-full flex flex-col">
@@ -9,19 +9,22 @@ const DetailsHeader = ({ artistId, artistData, songData }) => (
       <img
         alt="profile"
         src={
-          artistId ? artistData?.artists[artistId].attributes?.artwork?.url
-            .replace('{w}', '500')
-            .replace('{h}', '500')
+          artistId
+            ? artistData?.artists[artistId].attributes?.artwork?.url
+                .replace("{w}", "500")
+                .replace("{h}", "500")
             : songData?.images?.coverart
-}
+        }
         className="sm:w-48 w-28 sm:h-48 h-28 rounded-full object-cover border-2 shadow-xl shadow-black"
       />
 
       <div className="ml-5">
         <p className="font-bold sm:text-3xl text-xl text-white">
-          {artistId ? artistData?.artists[artistId].attributes?.name : songData?.title}
+          {artistId
+            ? artistData?.artists[artistId].attributes?.name
+            : songData?.title}
         </p>
-        {!artistId && (
+        {artistId && (
           <Link to={`/artists/${songData?.artists[0]?.adamid}`}>
             <p className="text-base text-gray-400 mt-2">{songData?.subtitle}</p>
           </Link>

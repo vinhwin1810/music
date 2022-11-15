@@ -13,10 +13,10 @@ const NavLinks = ({ handleClick }) => (
         key={item.name}
         to={item.to}
         className="flex flex-row justify-start items-center my-8 text-base 
-        font-medium text-gray-200 hover:text-cyan-100"
+        font-medium text-gray-100 hover:text-cyan-300"
         onClick={() => handleClick && handleClick()}
       >
-        <item.icon className="w-6 h-6 mr-2" />
+        <item.icon className="w-6 h-6 mr-2 " />
         {item.name}
       </NavLink>
     ))}
@@ -28,7 +28,7 @@ const Sidebar = () => {
 
   return (
     <>
-      <div className="md:flex hidden flex-col w-[240px] py-12 px-6 bg-[#3d4941]">
+      <div className="md:flex hidden flex-col w-[240px] py-12 px-6 bg-[#0c0c0c]">
         <img src={logo} alt="logo" className="w-full h-16 object-contain" />
         <NavLinks />
       </div>
@@ -50,7 +50,7 @@ const Sidebar = () => {
 
       <div
         className={`absolute top-0 h-screen w-2/3 bg-gradient-to-tl from-white/10 
-        to-[#483D8B] 
+        to-[#101011] 
         backdrop-blur-lg z-10 p-6 
         md:hidden smooth-transition ${
           mobileMenuOpen ? "left-0" : "-left-full"

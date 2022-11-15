@@ -75,13 +75,19 @@ const TopPlay = () => {
   return (
     <div
       ref={divRef}
-      className="xl:ml-6 ml-0 xl:mb-0 mb-6 flex-1 xl:max-w-[500px] max-w-full flex flex-col"
+      className="xl:ml-6 ml-0 xl:mb-0 mb-6 flex-1
+       xl:max-w-[500px] max-w-full flex flex-col"
     >
       <div className="w-full flex flex-col">
         <div className="flex flex-row justify-between items-center">
           <h2 className="text-white font-bold text-2xl">Top Charts</h2>
           <Link to="/top-charts">
-            <p className="text-gray-300 text-base cursor-pointer">See more</p>
+            <p
+              className="text-gray-300 text-base cursor-pointer
+            font-bold text-left mt-10 mb-10"
+            >
+              See more
+            </p>
           </Link>
         </div>
 
@@ -104,7 +110,12 @@ const TopPlay = () => {
         <div className="flex flex-row justify-between items-center">
           <h2 className="text-white font-bold text-2xl">Top Artists</h2>
           <Link to="/top-artists">
-            <p className="text-gray-300 text-base cursor-pointer">See more</p>
+            <p
+              className="text-gray-300 text-base cursor-pointer
+            font-bold text-left"
+            >
+              See more
+            </p>
           </Link>
         </div>
 
@@ -117,7 +128,7 @@ const TopPlay = () => {
           modules={[FreeMode]}
           className="mt-4"
         >
-          {topPlays?.slice(0, 5).map((artist) => (
+          {topPlays?.slice(0, 10).map((artist) => (
             <SwiperSlide
               key={artist?.key}
               style={{ width: "25%", height: "auto" }}

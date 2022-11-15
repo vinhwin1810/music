@@ -17,6 +17,10 @@ export const genres = [
   { title: "Reggae", value: "REGGAE_DANCE_HALL" },
   { title: "House", value: "HOUSE" },
   { title: "K-Pop", value: "K_POP" },
+  { title: "French Pop", value: "FRENCH_POP" },
+  { title: "Mexico", value: "REG_MEXICO" },
+  { title: "Songwriter", value: "SINGER_SONGWRITER" },
+  { title: "Afro Beats", value: "AFRO_BEATS" },
 ];
 
 export const links = [
